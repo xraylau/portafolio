@@ -9,7 +9,7 @@
 <body class="bg-dark">
 
   <!-- VERSIÓN ESCRITORIO (visible solo en md y arriba) -->
-  <div class="d-none d-md-none d-lg-block">
+  <div class="d-none d-lg-block">
     <!-- NAV -->
     <header class="container-fluid">
       <div class="row py-3 align-items-center text-center">
@@ -41,7 +41,7 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <div class="p-3" id="XRayLau" style="color:#652482; margin-top: -50px; margin-left: -150px; height: 100px; width: 200px;">
-               <h1 class="m-0">XRayLau</h1>
+               <h3 class="m-0">XRayLau</h3>
           </div>
           <div class="p-3 code-style" style="color: #9E7DB6; margin-top: 200px; margin-left: 350px; height: 100px; width: 200px;">
                <h2 class="m-0">Producciones</h2>
@@ -278,50 +278,45 @@
     </header>
 
     <!-- PRESENTACIÓN / HERO -->
-    <section class="container my-4">
-    <div class="row align-items-center">
-      <!-- Textos a la izquierda -->
-      <div class="col-6">
-        <div class="p-2" id="XRayLau-mobile" style="color:#652482;">
-          <h1 class="m-0" style="font-size: 100px;">XRayLau</h1>
-        </div>
-        <div class="p-2 code-style" style="color: #9E7DB6; margin-top: -30px; margin-left: 118px;">
-          <h2 class="m-0" style="font-size: 18px;">Producciones</h2>
-        </div>
+<section class="container my-4">
+  <!-- Título y subtítulo -->
+  <div class="row">
+    <div class="col-12 text-center">
+      <div id="XRayLau-mobile">
+        <h1 class="xraylau-title m-0">XRayLau</h1>
       </div>
-      
-      <!-- Modelo 3D a la derecha -->
-      <div class="col-6">
-        <model-viewer
-          src="modelos3d/muñeco.glb"
-          alt="Galería de proyectos en 3D"
-          auto-rotate
-          auto-rotate-delay="50"
-          auto-rotate-speed="270"
-          poster="imagenes/recurso10.png"
-          shadow-intensity="1"
-          exposure="1.5" 
-          environment-image="modelos3d/hola2.hdr" 
-          style="width: 100%; height: 350px; background-color: transparent;">
-        </model-viewer>
+      <div class="code-style xraylau-subtitle" style="color: #9E7DB6;">
+        <h2 class="m-0">Producciones</h2>
       </div>
     </div>
-    
-    <!-- Texto descriptivo debajo -->
-    <div class="row mt-3">
-      <div class="col-12">
-        <div class="p-3 code-style" id="sobre-mi-mobile" style="color:#652482; font-size: 16px; margin-top: 30px;">
-          <p><strong>Hola, soy Laura, la mente y el ojo detrás de XRayLau, una marca que nació de mi obsesión por ver más allá de lo evidente.
+  </div>
+  
+  <!-- Contenido en fila -->
+  <div class="row align-items-center mt-1" >
+    <div class="col-6 pe-1">
+      <model-viewer class="model-viewer-mobile"
+        src="/modelos3d/muñeco.glb"
+        auto-rotate
+              auto-rotate-delay="50"
+              auto-rotate-speed="270"
+              poster="imagenes/recurso10.png"
+              shadow-intensity="1"
+              exposure="1.5" 
+               camera-orbit=" -10m" 
+              environment-image="modelos3d/hola2.hdr" 
+        style="width: 100%; height: 300px;">
+      </model-viewer>
+    </div>
+    <div class="col-6 ps-1">
+      <div id="sobre-mi-mobile" class="code-style" style="font-size:16px; margin-top: 150px; color: #652482;">
+        <p><strong>Hola, soy Laura, la mente y el ojo detrás de XRayLau, una marca que nació de mi obsesión por ver más allá de lo evidente.
                       Soy productora multimedia y me muevo entre cámaras, ideas y software como si fueran extensiones de mí. 
                       Con XRayLau quiero dejar huella, no solo visual, sino emocional.</strong></p>
-          <div class="text-center">
-            <a href="servicios.html" class="btn mt-2" style="background-color: #652482; height: 50px; width: 160px; color: #9E7DB6; border: #9E7DB6 solid 6px; font-size: 16px; line-height: 38px;">SERVICIOS</a>
-          </div>
-        </div>
+         <a href="servicios.html" class="btn" style="background-color: #652482; height: 70px; width: 220px; color: #9E7DB6; border: #9E7DB6 solid 8px; font-size: 22px; line-height: 54px;">SERVICIOS</a>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
 
     <!-- PROYECTOS -->
     <section class="container-fluid my-5 px-0" id="proyectos-mobile">

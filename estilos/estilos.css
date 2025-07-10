@@ -12,9 +12,10 @@
 body {
   font-family: 'MatherLaord', sans-serif;
   color: #fff;
-  Background-image: url('../imagenes/fondo.png');
+  background-image: url('../imagenes/fondo.png');
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 /* Tipografía tipo código (puedes usar en bloques específicos) */
@@ -23,9 +24,47 @@ body {
 }
 
 h1 {
+  font-family: 'MatherLaord', sans-serif;
+  color: #652482;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
+h3 {
   font-size: 300px;
 }
 
+
+/* Versión escritorio (ya existe) */
+.xraylau-title {
+  font-size: 300px;
+}
+
+/* Versión tablet */
+@media (max-width: 991px) {
+  .xraylau-title {
+    font-size: 120px;
+  }
+}
+
+/* Versión móvil ajustada */
+@media (max-width: 400px) {
+  .xraylau-title {
+    font-size: 42px; /* Ajustado a un tamaño más razonable */
+    letter-spacing: -0.5px; /* Mejor legibilidad en pequeño */
+  }
+  
+  /* Ajustes complementarios para mantener proporciones */
+  .xraylau-subtitle {
+    font-size: 12px !important;
+    margin-top: -5px !important;
+  }
+  
+  .model-viewer-mobile {
+    height: 160px !important;
+    margin-top: 100px;
+  }
+}
     .desktop {
       display: flex;
       flex-wrap: wrap;
@@ -86,3 +125,54 @@ h1 {
       text-align: right;
       font-size: 14px;
     }
+
+    /* Versión móvil (menos de 400px) */
+@media (max-width: 400px) {
+  /* Contenedor del modelo 3D */
+  model-viewer {
+    display: block;
+    width: 100% !important;
+    height: 300px !important;
+    margin: 20px auto !important;
+    order: 2; 
+  }
+  
+  /* Ajustes para el título */
+   #XRayLau-mobile h1 {
+    font-size: 48px !important;  
+    line-height: 1;
+    margin-bottom: 5px;
+    letter-spacing: -1px; /* Opcional: ajusta el espaciado entre letras */
+  }
+  /* Ajustes para el subtítulo "Producciones" */
+  #XRayLau-mobile + .code-style h2 {
+    font-size: 16px !important;
+    text-align: center;
+    margin-left: 0 !important;
+    margin-top: -10px !important;
+    order: 1;
+  }
+  
+  /* Reorganización de la sección hero */
+  section.container.my-4 > .row {
+    flex-direction: column;
+    display: flex;
+  }
+  
+  /* Ajuste para la sección "Sobre mí" */
+  #sobre-mi-mobile {
+    order: 3;
+    margin-top: 120px !important;
+    margin-left: 0 !important;
+    padding: 10px !important;
+  }
+  
+  /* Ajuste del botón SERVICIOS */
+  #sobre-mi-mobile .btn {
+    width: 150px !important;
+    height: 45px !important;
+    font-size: 14px !important;
+    line-height: 30px !important;
+    margin-top: 20px !important;
+  }
+}
