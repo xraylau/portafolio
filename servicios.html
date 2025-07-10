@@ -2,42 +2,396 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>servicios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XRayLau - Servicios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="estilos/estilos.css">
 </head>
-<body class="code-style">
-  <div class="desktop">
-    <div class="icon">
-      <div class="folder">
-        <div class="document"></div>
+<body class="desktop-ui bg-dark">
+
+  <!-- Fondo de escritorio -->
+  <div class="desktop-background"></div>
+  
+  <!-- Iconos/Carpetas de servicios -->
+  <div class="desktop-icons">
+    
+    <!-- Carpeta Modelado 3D -->
+    <div class="desktop-icon" onclick="openWindow('modelado-window')">
+      <div class="folder-icon">
+        <div class="folder-top"></div>
+        <div class="folder-body"></div>
+        <div class="document-inside"></div>
       </div>
-      <span>Modelado3D.mb</span>
+      <span class="icon-label code-style">Modelado3D.mb</span>
     </div>
-    <div class="icon">
-      <div class="folder">
-        <div class="document"></div>
+    
+    <!-- Carpeta Fotografía -->
+    <div class="desktop-icon" onclick="openWindow('foto-window')">
+      <div class="folder-icon">
+        <div class="folder-top"></div>
+        <div class="folder-body"></div>
+        <div class="document-inside"></div>
       </div>
-      <span>Fotografía.jpg</span>
+      <span class="icon-label code-style">Fotografía.jpg</span>
     </div>
-    <div class="icon">
-      <div class="folder">
-        <div class="document"></div>
+    
+    <!-- Carpeta Diseño -->
+    <div class="desktop-icon" onclick="openWindow('diseno-window')">
+      <div class="folder-icon">
+        <div class="folder-top"></div>
+        <div class="folder-body"></div>
+        <div class="document-inside"></div>
       </div>
-      <span>Diseño.ai</span>
+      <span class="icon-label code-style">Diseño.ai</span>
     </div>
-    <div class="icon">
-      <div class="folder">
-        <div class="document"></div>
+    
+    <!-- Carpeta Programación -->
+    <div class="desktop-icon" onclick="openWindow('programacion-window')">
+      <div class="folder-icon">
+        <div class="folder-top"></div>
+        <div class="folder-body"></div>
+        <div class="document-inside"></div>
       </div>
-      <span>Programación.html</span>
+      <span class="icon-label code-style">Programación.html</span>
     </div>
-    <div class="icon">
-      <div class="folder">
-        <div class="document"></div>
+    
+    <!-- Carpeta Animación -->
+    <div class="desktop-icon" onclick="openWindow('animacion-window')">
+      <div class="folder-icon">
+        <div class="folder-top"></div>
+        <div class="folder-body"></div>
+        <div class="document-inside"></div>
       </div>
-      <span>Animación.jpg</span>
+      <span class="icon-label code-style">Animación.jpg</span>
     </div>
   </div>
-  <footer>11:11 PM 15/05/04</footer>
+  
+  <!-- ========= VENTANAS EMERGENTES ========= -->
+  
+  <!-- Ventana de Modelado 3D -->
+  <div id="modelado-window" class="desktop-window">
+    <div class="window-header">
+      <span class="window-title">Modelado3D.mb</span>
+      <div class="window-controls">
+        <button class="window-minimize">—</button>
+        <button class="window-maximize">□</button>
+        <button class="window-close" onclick="closeWindow('modelado-window')">×</button>
+      </div>
+    </div>
+    <div class="window-content">
+      <div class="window-icon">
+        <div class="folder-icon large">
+          <div class="folder-top"></div>
+          <div class="folder-body"></div>
+          <div class="document-inside"></div>
+        </div>
+      </div>
+      <h3>Modelado 3D Profesional</h3>
+      <div class="window-details">
+        <p><strong>Tipo:</strong> Archivo Maya Binary (.mb)</p>
+        <p><strong>Tamaño:</strong> 45 MB</p>
+        <p><strong>Última modificación:</strong> 15/05/04 11:11 PM</p>
+        <hr>
+        <p>Servicios incluyen:</p>
+        <ul>
+          <li>Modelado de personajes y objetos</li>
+          <li>Creación de escenarios 3D</li>
+          <li>Texturizado y materiales PBR</li>
+          <li>Optimización para render</li>
+        </ul>
+      </div>
+      <div class="window-footer">
+        <button class="btn-action">Abrir con Maya</button>
+        <button class="btn-action">Exportar</button>
+        <button class="btn-action" onclick="closeWindow('modelado-window')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ventana de Fotografía -->
+  <div id="foto-window" class="desktop-window">
+    <div class="window-header">
+      <span class="window-title">Fotografía.jpg</span>
+      <div class="window-controls">
+        <button class="window-minimize">—</button>
+        <button class="window-maximize">□</button>
+        <button class="window-close" onclick="closeWindow('foto-window')">×</button>
+      </div>
+    </div>
+    <div class="window-content">
+      <div class="window-icon">
+        <div class="file-icon large">
+          <div class="file-top"></div>
+          <div class="file-body"></div>
+        </div>
+      </div>
+      <h3>Servicios Fotográficos</h3>
+      <div class="window-details">
+        <p><strong>Tipo:</strong> Imagen JPEG (.jpg)</p>
+        <p><strong>Tamaño:</strong> 8.4 MB</p>
+        <p><strong>Dimensiones:</strong> 6000 × 4000 px</p>
+        <hr>
+        <p>Servicios incluyen:</p>
+        <ul>
+          <li>Fotografía de producto</li>
+          <li>Sesiones de retrato</li>
+          <li>Fotografía artística</li>
+          <li>Edición profesional</li>
+        </ul>
+      </div>
+      <div class="window-footer">
+        <button class="btn-action">Abrir con Photoshop</button>
+        <button class="btn-action">Editar</button>
+        <button class="btn-action" onclick="closeWindow('foto-window')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ventana de Diseño -->
+  <div id="diseno-window" class="desktop-window">
+    <div class="window-header">
+      <span class="window-title">Diseño.ai</span>
+      <div class="window-controls">
+        <button class="window-minimize">—</button>
+        <button class="window-maximize">□</button>
+        <button class="window-close" onclick="closeWindow('diseno-window')">×</button>
+      </div>
+    </div>
+    <div class="window-content">
+      <div class="window-icon">
+        <div class="file-icon large">
+          <div class="file-top"></div>
+          <div class="file-body"></div>
+        </div>
+      </div>
+      <h3>Diseño Gráfico</h3>
+      <div class="window-details">
+        <p><strong>Tipo:</strong> Archivo Adobe Illustrator (.ai)</p>
+        <p><strong>Tamaño:</strong> 32 MB</p>
+        <p><strong>Última modificación:</strong> 14/05/04 09:30 PM</p>
+        <hr>
+        <p>Servicios incluyen:</p>
+        <ul>
+          <li>Diseño de logotipos</li>
+          <li>Identidad visual</li>
+          <li>Ilustración vectorial</li>
+          <li>Materiales impresos</li>
+        </ul>
+      </div>
+      <div class="window-footer">
+        <button class="btn-action">Abrir con Illustrator</button>
+        <button class="btn-action">Exportar PNG</button>
+        <button class="btn-action" onclick="closeWindow('diseno-window')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ventana de Programación -->
+  <div id="programacion-window" class="desktop-window">
+    <div class="window-header">
+      <span class="window-title">Programación.html</span>
+      <div class="window-controls">
+        <button class="window-minimize">—</button>
+        <button class="window-maximize">□</button>
+        <button class="window-close" onclick="closeWindow('programacion-window')">×</button>
+      </div>
+    </div>
+    <div class="window-content">
+      <div class="window-icon">
+        <div class="file-icon large">
+          <div class="file-top"></div>
+          <div class="file-body"></div>
+        </div>
+      </div>
+      <h3>Desarrollo Web</h3>
+      <div class="window-details">
+        <p><strong>Tipo:</strong> Documento HTML (.html)</p>
+        <p><strong>Tamaño:</strong> 12 KB</p>
+        <p><strong>Última modificación:</strong> 15/05/04 10:45 PM</p>
+        <hr>
+        <p>Servicios incluyen:</p>
+        <ul>
+          <li>Desarrollo front-end</li>
+          <li>Diseño web responsivo</li>
+          <li>Animaciones interactivas</li>
+          <li>Aplicaciones web</li>
+        </ul>
+      </div>
+      <div class="window-footer">
+        <button class="btn-action">Abrir con VS Code</button>
+        <button class="btn-action">Ejecutar</button>
+        <button class="btn-action" onclick="closeWindow('programacion-window')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ventana de Animación -->
+  <div id="animacion-window" class="desktop-window">
+    <div class="window-header">
+      <span class="window-title">Animación.jpg</span>
+      <div class="window-controls">
+        <button class="window-minimize">—</button>
+        <button class="window-maximize">□</button>
+        <button class="window-close" onclick="closeWindow('animacion-window')">×</button>
+      </div>
+    </div>
+    <div class="window-content">
+      <div class="window-icon">
+        <div class="file-icon large">
+          <div class="file-top"></div>
+          <div class="file-body"></div>
+        </div>
+      </div>
+      <h3>Animación Digital</h3>
+      <div class="window-details">
+        <p><strong>Tipo:</strong> Imagen JPEG (.jpg)</p>
+        <p><strong>Tamaño:</strong> 5.2 MB</p>
+        <p><strong>Dimensiones:</strong> 1920 × 1080 px</p>
+        <hr>
+        <p>Servicios incluyen:</p>
+        <ul>
+          <li>Motion graphics</li>
+          <li>Animación 2D/3D</li>
+          <li>Efectos visuales</li>
+          <li>Edición de video</li>
+        </ul>
+      </div>
+      <div class="window-footer">
+        <button class="btn-action">Abrir con After Effects</button>
+        <button class="btn-action">Reproducir</button>
+        <button class="btn-action" onclick="closeWindow('animacion-window')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+ // Array para llevar registro de las ventanas abiertas
+let openWindows = [];
+
+// Función para abrir ventanas
+function openWindow(windowId) {
+  const window = document.getElementById(windowId);
+  
+  // Ocultar otras ventanas si se mantiene presionada la tecla Ctrl
+  if (!event.ctrlKey) {
+    document.querySelectorAll('.desktop-window').forEach(w => {
+      w.style.display = 'none';
+    });
+  }
+  
+  window.style.display = 'block';
+  
+  // Posición aleatoria para nueva ventana
+  if (!openWindows.includes(windowId)) {
+    const randomX = Math.floor(Math.random() * 100);
+    const randomY = Math.floor(Math.random() * 100);
+    window.style.left = `${randomX}px`;
+    window.style.top = `${randomY}px`;
+    window.style.transform = 'none';
+    openWindows.push(windowId);
+  }
+  
+  // Hacer la ventana arrastrable
+  makeDraggable(window);
+  
+  // Traer al frente
+  bringToFront(window);
+}
+
+// Función para cerrar ventanas
+function closeWindow(windowId) {
+  const window = document.getElementById(windowId);
+  window.style.display = 'none';
+  
+  // Eliminar de la lista de ventanas abiertas
+  openWindows = openWindows.filter(id => id !== windowId);
+}
+
+// Hacer ventanas arrastrables
+function makeDraggable(window) {
+  const header = window.querySelector('.window-header');
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  header.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - window.getBoundingClientRect().left;
+    offsetY = e.clientY - window.getBoundingClientRect().top;
+    bringToFront(window);
+    e.preventDefault(); // Evitar selección de texto
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    
+    window.style.left = `${e.clientX - offsetX}px`;
+    window.style.top = `${e.clientY - offsetY}px`;
+    window.style.transform = 'none';
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+}
+
+// Traer ventana al frente
+function bringToFront(window) {
+  const allWindows = document.querySelectorAll('.desktop-window');
+  let highestZ = 100;
+  
+  allWindows.forEach(w => {
+    const z = parseInt(w.style.zIndex || '100');
+    if (z > highestZ) highestZ = z;
+    w.classList.remove('active-window');
+  });
+  
+  window.style.zIndex = highestZ + 1;
+  window.classList.add('active-window');
+}
+
+// Cerrar al hacer clic fuera (opcional)
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.desktop-window') && !e.target.closest('.desktop-icon')) {
+    document.querySelectorAll('.desktop-window').forEach(window => {
+      window.style.display = 'none';
+    });
+  }
+});
+
+// Minimizar ventana (ejemplo básico)
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('window-minimize')) {
+    const window = e.target.closest('.desktop-window');
+    window.style.display = 'none';
+  }
+});
+
+// Maximizar ventana (ejemplo básico)
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('window-maximize')) {
+    const window = e.target.closest('.desktop-window');
+    window.classList.toggle('maximized');
+    
+    if (window.classList.contains('maximized')) {
+      window.style.width = '90%';
+      window.style.height = '90vh';
+      window.style.left = '5%';
+      window.style.top = '5%';
+      window.style.transform = 'none';
+    } else {
+      window.style.width = '';
+      window.style.height = '';
+      window.style.left = '';
+      window.style.top = '';
+    }
+  }
+});
+  </script>
+  <!-- Barra de tareas -->
+  <footer class="taskbar">
+    <div class="taskbar-time">11:11 PM 15/05/04</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
