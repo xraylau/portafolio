@@ -9,7 +9,7 @@
 <body class="bg-dark">
 
   <!-- VERSIÓN ESCRITORIO (visible solo en md y arriba) -->
-  <div class="d-none d-md-block">
+  <div class="d-none d-md-none d-lg-block">
     <!-- NAV -->
     <header class="container-fluid">
       <div class="row py-3 align-items-center text-center">
@@ -131,6 +131,78 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+   <div class="d-none d-md-block d-lg-none">
+    <!-- NAV TABLET -->
+    <header class="container-fluid">
+      <div class="row py-3 align-items-center">
+        <!-- Logo centrado -->
+        <div class="col-12 text-center mb-3">
+          <img src="imagenes/logo.png" alt="logo" style="width: 300px; height: 169px">
+        </div>
+        
+        <!-- Menú horizontal compacto -->
+        <div class="col-12">
+          <ul class="nav justify-content-center">
+            <li class="nav-item mx-2"><a href="servicios.html" class="nav-link code-style" style="color: #C8DA80; font-size: 24px;">SERVICIOS</a></li>
+            <li class="nav-item mx-2"><a href="proyectos.html" class="nav-link code-style" style="color: #C8DA80; font-size: 24px;">PROYECTOS</a></li>
+            <li class="nav-item mx-2"><a href="#sobre-mi" class="nav-link code-style" style="color: #C8DA80; font-size: 24px;">SOBRE MÍ</a></li>
+            <li class="nav-item mx-2"><a href="#contacto" class="nav-link code-style" style="color: #C8DA80; font-size: 24px;">CONTACTO</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- PRESENTACIÓN TABLET -->
+    <section class="container my-4">
+      <div class="row align-items-center">
+        <!-- Texto y botón -->
+        <div class="col-md-6">
+          <div class="p-2" style="color:#652482;">
+            <h1 style="font-size: 120px;">XRayLau</h1>
+            <h2 class="code-style" style="color: #9E7DB6; font-size: 24px; margin-top: -20px; margin-left: 120px;">Producciones</h2>
+          </div>
+          <div class="p-3 code-style" style="color:#652482; font-size: 20px;">
+            <p><strong>Hola, soy Laura, la mente y el ojo detrás de XRayLau, una marca que nació de mi obsesión por ver más allá de lo evidente.
+                      Soy productora multimedia y me muevo entre cámaras, ideas y software como si fueran extensiones de mí. 
+                      Con XRayLau quiero dejar huella, no solo visual, sino emocional. </strong></p>
+            <a href="servicios.html" class="btn" style="background-color: #652482; height: 70px; width: 220px; color: #9E7DB6; border: #9E7DB6 solid 8px; font-size: 22px; line-height: 54px;">SERVICIOS</a>
+          </div>
+        </div>
+        
+        <!-- Modelo 3D -->
+        <div class="col-md-6">
+          <model-viewer
+            src="modelos3d/muñeco.glb"
+            style="width: 100%; height: 400px;"
+            [otros atributos igual que en desktop]>
+          </model-viewer>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS TABLET -->
+    <section class="container-fluid my-4 px-0">
+      <model-viewer
+        src="modelos3d/exportado.glb"
+        style="width: 100vw; height: 70vh;"
+        [otros atributos igual que en desktop]>
+      </model-viewer>
+    </section>
+
+    <!-- CONTACTO TABLET -->
+    <section class="container-fluid py-4" style="background-color: #652482;">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-10">
+          <h3 style="color: #C8DA80; font-size: 60px;">CONTACTO</h3>
+          <button class="btn my-3" style="background-color: #9E7DB6; height: 80px; width: 250px; color: #C8DA80; border: #C8DA80 solid 8px; font-size: 24px;">BLOG</button>
+          
+          <p class="code-style" style="color: #C8DA80; font-size: 36px;"><em>Redes sociales</em></p>
+          [Carrusel igual que en desktop pero con tamaño reducido]
         </div>
       </div>
     </section>
