@@ -11,10 +11,7 @@
 /* Aplica tipografía general del sitio */
 body {
   font-family: 'MatherLaord', sans-serif;
-  color: #fff;
-  background-image: url('../imagenes/fondo.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  color: #201f1f;
   padding: 0%;
 
 }
@@ -80,9 +77,6 @@ desktop-ui {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../imagenes/fondo.png');
-  background-size: cover;
-  background-position: center;
   z-index: -1;
 }
 
